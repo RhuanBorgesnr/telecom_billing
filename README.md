@@ -1,4 +1,3 @@
-
 # Projeto de Faturamento de Telecomunicações
 
 ## Descrição
@@ -42,7 +41,6 @@ Este projeto é um **sistema de faturamento de telecomunicações** desenvolvido
    pip install -r requirements.txt
    ```
 
-
 4. Execute as migrações do banco de dados:
 
    ```bash
@@ -73,7 +71,6 @@ Este projeto é um **sistema de faturamento de telecomunicações** desenvolvido
    http://127.0.0.1:8000/api/docs/
    ```
 
-
 ### Testes
 
 Para rodar os testes do projeto, use o seguinte comando:
@@ -81,6 +78,21 @@ Para rodar os testes do projeto, use o seguinte comando:
 ```bash
 python manage.py test
 ```
+
+## URLs da Documentação
+
+A aplicação possui documentação interativa utilizando o drf-spectacular. Você pode acessar os seguintes endpoints para consultar a API e sua documentação:
+
+Swagger Docs (para visualizar a documentação interativa da API):
+
+http://127.0.0.1:8000/api/docs/
+Esquema da API (para obter o schema em formato JSON):
+
+http://127.0.0.1:8000/api/schema/
+
+Aplicação online (acesse a aplicação em produção):
+
+https://telecom-billing.onrender.com/api/
 
 ## Documentação da API
 
@@ -105,7 +117,7 @@ Cria uma nova fatura de telecomunicação.
   {
     "numero_telefone": "123456789",
     "periodo": "2024-11-01",
-    "custo_total": 50.00
+    "custo_total": 50.0
   }
   ```
 - **Resposta**:
@@ -127,7 +139,7 @@ Atualiza uma fatura específica pelo ID.
 - **Corpo** (JSON):
   ```json
   {
-    "custo_total": 55.00
+    "custo_total": 55.0
   }
   ```
 - **Resposta**:
@@ -139,6 +151,7 @@ Atualiza uma fatura específica pelo ID.
 Deleta uma fatura específica pelo ID.
 
 - **Resposta**:
+
   - `204 No Content`
   - Sem conteúdo retornado.
 

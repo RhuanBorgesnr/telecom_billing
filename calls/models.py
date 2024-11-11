@@ -19,7 +19,7 @@ class CallRecord(models.Model):
 
     def get_duration(self, end_record):
         """
-        Calcula a duração da chamada em segundos.
+        Calculates call duration in seconds.
         """
         if self.type == 'start' and end_record.type == 'end' and self.call_id == end_record.call_id:
             return (end_record.timestamp - self.timestamp).total_seconds()
@@ -27,7 +27,7 @@ class CallRecord(models.Model):
 
     def calculate_call_price(self, price_per_minute=0.09):
         """
-        Calcula o preço da chamada baseada na duração, convertendo segundos para minutos.
+        Calculate call price based on duration, converting seconds to minutes.       
         """
         if self.type == 'start':
             end_record = CallRecord.objects.filter(call_id=self.call_id, type='end').first()
