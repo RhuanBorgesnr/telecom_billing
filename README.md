@@ -94,10 +94,6 @@ Aplicação online (acesse a aplicação em produção):
 
 https://telecom-billing.onrender.com/api/
 
-## Documentação da API
-
-A API deste projeto segue os princípios REST e oferece acesso aos dados de faturamento de telecomunicações através dos métodos HTTP padrões (GET, POST, PUT, DELETE).
-
 
 ## Endpoint principal
 
