@@ -50,7 +50,7 @@ Este projeto é um **sistema de faturamento de telecomunicações** desenvolvido
 5. (Opcional) Carregue dados de exemplo utilizando as **fixtures**:
 
    ```bash
-   python manage.py loaddata dados_exemplo.json
+   python manage.py loaddata db.json
    ```
 
 6. Inicie o servidor de desenvolvimento:
