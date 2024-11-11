@@ -13,6 +13,6 @@ class BillSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Bill
-        fields = ['phone_number', 'period', 'total_cost', 'call_records']
+        fields = ['id','phone_number', 'period', 'total_cost', 'call_records']
         
     
