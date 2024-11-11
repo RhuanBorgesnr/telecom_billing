@@ -98,6 +98,37 @@ https://telecom-billing.onrender.com/api/
 
 A API deste projeto segue os princípios REST e oferece acesso aos dados de faturamento de telecomunicações através dos métodos HTTP padrões (GET, POST, PUT, DELETE).
 
+
+## Endpoint principal
+
+#### 3. `/api/call-records/bill/` [GET]
+
+Este endpoint retorna o custo da chamada baseado no número de telefone e período fornecidos. Exemplo de uso:
+
+```
+GET /api/call-records/bill/?phone_number=99988526423&period=2017-12
+```
+
+**Exemplo de resposta:**
+
+```json
+{
+    "id": 41,
+    "phone_number": "99988526423",
+    "period": "2018-05-01",
+    "total_cost": "13.50",
+    "call_records": [
+        {
+            "id": 17,
+            "type": "start",
+            "timestamp": "2018-05-10T08:00:00Z",
+            "call_id": "78",
+            "source": "99988526423",
+            "destination": "9933468278"
+        }
+    ]
+}
+```
 ## Ambiente de Trabalho
 
 - **Sistema Operacional**: macOS
