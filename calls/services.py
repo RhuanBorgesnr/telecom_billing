@@ -39,8 +39,9 @@ class BillingService:
             timestamp__date__range=[start_date, end_date]
         ).order_by('timestamp')
 
-        # Calculate total cost based on specific logic
-        return sum(call.calculate_call_price() for call in calls)
+        total_cost = sum(call.calculate_call_price() for call in calls)
+        
+        return round(total_cost, 2)
 
     @staticmethod
     def get_or_create_bill(phone_number: str, period: str = None):
